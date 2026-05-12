@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Letërsia Shqiptare</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+<nav>
+  <h1>📚 Letërsia Shqiptare</h1>
+  <div class="links">
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('learn')">Learn</button>
+  </div>
+</nav>
+
+<!-- HOME -->
+<section class="home" id="homePage">
+
+  <h2>Letërsia Shqiptare</h2>
+
+  <div class="home-text">
+    Letërsia shqiptare është një nga pasuritë më të rëndësishme kulturore të shqiptarëve.
+    Ajo fillon me dorëshkrimet dhe tekstet fetare të periudhës mesjetare, zhvillohet gjatë
+    Rilindjes Kombëtare dhe vazhdon me letërsinë moderne dhe bashkëkohore.
+
+    <br><br>
+
+    Nga “Meshari” i Gjon Buzukut deri te Kadare, letërsia shqiptare përfaqëson identitetin,
+    historinë dhe shpirtin kulturor të kombit shqiptar.
+  </div>
+
+  <div class="highlight-boxes">
+    <div class="box brown">📖 Histori e thellë letrare</div>
+    <div class="box blue">✨ Autorë të mëdhenj</div>
+    <div class="box gold">🌍 Ndikim ndërkombëtar</div>
+  </div>
+
+</section>
+
+<!-- LEARN -->
+<section class="learn" id="learnPage">
+
+  <h2>Eksploro Letërsinë</h2>
+
+  <div class="cards">
+
+    <div class="card" onclick="showDetails('medieval')">
+      <div class="era-title medieval">Letërsia Mesjetare</div>
+      <div class="card-content">
+        <h3>Fillimet</h3>
+        <p>Tekstet e para në gjuhën shqipe.</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="showDetails('renaissance')">
+      <div class="era-title renaissance">Rilindja</div>
+      <div class="card-content">
+        <h3>Zgjimi Kombëtar</h3>
+        <p>Formimi i identitetit shqiptar.</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="showDetails('modern')">
+      <div class="era-title modern">Letërsia Moderne</div>
+      <div class="card-content">
+        <h3>Zhvillimi artistik</h3>
+        <p>Romane dhe poezi moderne.</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="showDetails('contemporary')">
+      <div class="era-title contemporary">Bashkëkohore</div>
+      <div class="card-content">
+        <h3>Autorët e sotëm</h3>
+        <p>Letërsi moderne shqiptare.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="details" id="detailsBox"></div>
+
+</section>
+
+<script>
+
+const data = {
+
+  medieval: {
+    title:"Letërsia Mesjetare",
+    description:"Fillimet e shkrimit shqip.",
+    entries:[
+      {
+        author:"Gjon Buzuku",
+        book:"Meshari",
+        authorDesc:"Autor i librit të parë shqip.",
+        bookDesc:"Libër fetar historik."
+      },
+      {
+        author:"Pjetër Bogdani",
+        book:"Çeta e Profetëve",
+        authorDesc:"Figura e rëndësishme letrare.",
+        bookDesc:"Vepër filozofike e hershme."
+      },
+      {
+        author:"Pjetër Budi",
+        book:"Doktrina e Krishterë",
+        authorDesc:"Klerik dhe shkrimtar.",
+        bookDesc:"Tekst fetar shqip."
+      },
+      {
+        author:"Lekë Matrënga",
+        book:"E mbësuame e krishterë",
+        authorDesc:"Për tu zbuluar",
+        bookDesc:"Për tu zbuluar."
+      }
+    ]
+  },
+
+  renaissance: {
+    title:"Rilindja Kombëtare",
+    description:"Zgjimi kulturor shqiptar.",
+    entries:[
+      {
+        author:"Naim Frashëri",
+        book:"Bagëti e Bujqësi",
+        authorDesc:"Poet kombëtar.",
+        bookDesc:"Poezi patriotike."
+      },
+      {
+        author:"Sami Frashëri",
+        book:"Shqipëria ç'ka qenë",
+        authorDesc:"Mendimtar i madh.",
+        bookDesc:"Vepër politike."
+      },
+      {
+        author:"Jeronim De Rada",
+        book:"Këngët e Milosaos",
+        authorDesc:"Poet arbëresh.",
+        bookDesc:"Poemë romantike."
+      },
+      {
+        author:"Andon Zako Çajupi",
+        book:"Baba Tomorri",
+        authorDesc:"Për tu zbuluar",
+        bookDesc:"Për tu zbuluar."
+      },
+      {
+        author:"Ndre Mjeda",
+        book:"Juvenilia",
+        authorDesc:"Për tu zbuluar",
+        bookDesc:"Për tu zbuluar."
+      }
+    ]
+  },
+
+  modern: {
+    title:"Letërsia Moderne",
+    description:"Romane dhe poezi moderne.",
+    entries:[
+      {
+        author:"Ismail Kadare",
+        book:"Gjenerali i Ushtrisë së Vdekur",
+        authorDesc:"Autor botëror.",
+        bookDesc:"Roman mbi luftën."
+      },
+      {
+        author:"Migjeni",
+        book:"Vargje të Lira",
+        authorDesc:"Poet rebel.",
+        bookDesc:"Poezi sociale."
+      },
+      {
+        author:"Dritëro Agolli",
+        book:"Shkëlqimi dhe Rënia e Shokut Zylo",
+        authorDesc:"Shkrimtar realist.",
+        bookDesc:"Satirë shoqërore."
+      },
+      {
+        author:"Fatos Arapi",
+        book:"Më jepni një emër",
+        authorDesc:"Për tu zbuluar",
+        bookDesc:"Për tu zbuluar."
+      },
+      {
+        author:"Petro Marko",
+        book:"Hasta La Vista",
+        authorDesc:"Për tu zbuluar",
+        bookDesc:"Për tu zbuluar."
+      },
+      {
+        author:"Lasgush Poradeci",
+        book:"Vallja e Yjeve",
+        authorDesc:"Për tu zbuluar",
+        bookDesc:"Për tu zbuluar."
+      }
+    ]
+  },
+
+  contemporary: {
+    title:"Letërsia Bashkëkohore",
+    description:"Autorë modernë shqiptarë.",
+    entries:[
+      {
+        author:"Ben Blushi",
+        book:"Të jetosh në ishull",
+        authorDesc:"Shkrimtar modern.",
+        bookDesc:"Roman historik."
+      },
+      {
+        author:"Fatos Kongoli",
+        book:"I humburi",
+        authorDesc:"Romancier psikologjik.",
+        bookDesc:"Drama sociale."
+      },
+      {
+        author:"Elvira Dones",
+        book:"Sworn Virgin",
+        authorDesc:"Autore ndërkombëtare.",
+        bookDesc:"Identitet dhe traditë."
+      },
+      {
+        author:"Mimoza Ahmeti",
+        book:"Delirium",
+        authorDesc:"Poete bashkëkohore shqiptare, e njohur për stilin modern, shpesh provokues dhe filozofik.",
+        bookDesc:"Trajton tema si identiteti, ndjenjat, liria individuale dhe psikologjia njerëzore në mënyrë shumë moderne."
+      }
+    ]
+  }
+
+};
+
+function showPage(page){
+  document.getElementById("homePage").style.display =
+  page==="home"?"block":"none";
+
+  document.getElementById("learnPage").style.display =
+  page==="learn"?"block":"none";
+}
+
+function showDetails(section){
+
+  const info = data[section];
+  const box = document.getElementById("detailsBox");
+
+  box.style.display="block";
+
+  box.innerHTML=`
+    <h3>${info.title}</h3>
+    <p>${info.description}</p>
+
+    <div class="entries">
+      ${info.entries.map(e=>`
+        <div class="entry">
+          <h4>${e.author}</h4>
+          <p><b>📖</b> ${e.book}</p>
+          <p><b>✍️</b> ${e.authorDesc}</p>
+          <p><b>📚</b> ${e.bookDesc}</p>
+        </div>
+      `).join("")}
+    </div>
+  `;
+}
+
+showPage("home");
+
+</script>
+
+</body>
+</html>

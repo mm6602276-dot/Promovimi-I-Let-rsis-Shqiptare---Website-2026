@@ -1,0 +1,294 @@
+<style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Georgia, serif;
+    }
+
+    body{
+      background:
+      linear-gradient(
+      to bottom,
+      #fff1f4,
+      #fdf0eb,
+      #f9eef7
+      );
+
+      color:#5f4b53;
+      min-height:100vh;
+    }
+
+    /* NAVBAR */
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+
+      padding:20px 30px;
+
+      background:#ffe3ea;
+
+      border-bottom:2px solid #e4b6c2;
+
+      position:sticky;
+      top:0;
+
+      z-index:100;
+    }
+
+    nav h1{
+      color:#b86b85;
+      font-size:30px;
+      letter-spacing:1px;
+    }
+
+    nav .links button{
+      background:none;
+      border:none;
+
+      color:#7b5d68;
+
+      margin-left:20px;
+
+      font-size:17px;
+
+      cursor:pointer;
+
+      transition:0.3s;
+    }
+
+    nav .links button:hover{
+      color:#d67c9c;
+    }
+
+    /* HOME */
+
+    .home{
+      max-width:1150px;
+      margin:auto;
+      padding:70px 20px;
+      text-align:center;
+    }
+
+    .home h2{
+      font-size:65px;
+      color:#c77490;
+      margin-bottom:35px;
+    }
+
+    .home-text{
+      background:#fff8fb;
+
+      padding:40px;
+
+      border-radius:30px;
+
+      border:2px solid #f2ccd8;
+
+      line-height:1.9;
+
+      font-size:19px;
+
+      color:#6b5560;
+
+      box-shadow:
+      0 10px 30px rgba(215,145,175,0.15);
+    }
+
+    /* HIGHLIGHTS */
+
+    .highlight-boxes{
+      display:grid;
+      grid-template-columns:
+      repeat(auto-fit,minmax(250px,1fr));
+
+      gap:20px;
+
+      margin-top:40px;
+    }
+
+    .box{
+      padding:30px;
+
+      border-radius:25px;
+
+      font-size:19px;
+      font-weight:bold;
+
+      color:white;
+
+      box-shadow:
+      0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .brown{ background:#d8a0b0; }
+    .blue{ background:#a9bfd8; }
+    .gold{ background:#e0b78c; }
+
+    /* LEARN */
+
+    .learn{
+      display:none;
+
+      padding:60px 20px;
+
+      max-width:1250px;
+
+      margin:auto;
+    }
+
+    .learn h2{
+      text-align:center;
+
+      font-size:50px;
+
+      color:#c77490;
+
+      margin-bottom:45px;
+    }
+
+    .cards{
+      display:grid;
+
+      grid-template-columns:
+      repeat(auto-fit,minmax(300px,1fr));
+
+      gap:25px;
+    }
+
+    .card{
+      border-radius:30px;
+
+      overflow:hidden;
+
+      cursor:pointer;
+
+      transition:0.35s;
+
+      border:2px solid #f0cad7;
+
+      background:#fff9fc;
+
+      box-shadow:
+      0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+    }
+
+    /* ERA TITLES */
+
+    .era-title{
+      height:190px;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      text-align:center;
+
+      padding:20px;
+
+      font-size:33px;
+      font-weight:bold;
+
+      color:white;
+
+      letter-spacing:1px;
+    }
+
+    .medieval{ background:#d8a0b0; }
+    .renaissance{ background:#a9bfd8; }
+    .modern{ background:#e0b78c; }
+    .contemporary{ background:#b89ab5; }
+
+    /* CARD CONTENT */
+
+    .card-content{
+      background:#fff8fb;
+      padding:25px;
+    }
+
+    .card-content h3{
+      color:#b86b85;
+      margin-bottom:10px;
+      font-size:24px;
+    }
+
+    .card-content p{
+      color:#6b5560;
+      line-height:1.7;
+    }
+
+    /* DETAILS */
+
+    .details{
+      margin-top:45px;
+
+      background:#fff8fb;
+
+      border:2px solid #f0cad7;
+
+      border-radius:30px;
+
+      padding:35px;
+
+      display:none;
+
+      box-shadow:
+      0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .details h3{
+      color:#c77490;
+      margin-bottom:15px;
+      font-size:36px;
+    }
+
+    .details p{
+      line-height:1.8;
+    }
+
+    .entries{
+      display:grid;
+      grid-template-columns:
+      repeat(auto-fit,minmax(260px,1fr));
+
+      gap:20px;
+      margin-top:30px;
+    }
+
+    .entry{
+      background:white;
+
+      border-radius:22px;
+
+      padding:20px;
+
+      border:1px solid #efd3dc;
+
+      box-shadow:
+      0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .entry h4{
+      color:#b86b85;
+      margin-bottom:10px;
+      font-size:21px;
+    }
+
+    .entry p{
+      margin-bottom:8px;
+      line-height:1.6;
+    }
+
+    @media(max-width:768px){
+      .home h2{ font-size:45px; }
+      .learn h2{ font-size:38px; }
+    }
+
+  </style>
